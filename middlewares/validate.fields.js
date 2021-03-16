@@ -6,11 +6,11 @@ const validateFields = (req = request, res = response, next) => {
 
     if ( !errors.isEmpty() ) {
 
-        const { msg } = errors.array()[0];
+        const [ error ] = errors.array();
 
         return res.status(400).json({
             responseCode: 'ERROR',
-            description: msg,
+            description: error.msg,
         });
     }
 
