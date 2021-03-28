@@ -3,12 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso Denegado</title>
-
+    <title>Google sign-in</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="351145407829-7uj81ncomklt5sm6dljv205mmqk98hng.apps.googleusercontent.com">
 </head>
 <body>
 
-    <h1>Acceso Denegado</h1>
+    <h1>Google sign-in</h1>
+    <hr>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <a href="#" onclick="signOut();">Sign out</a>
+    <div>
+        <img name="googleImg" id="googleImg" src=""/>
+        <div id="nameGoogle"></div>
+        <div id="emailGoogle"></div>
+    </div>
 
+    <script>
+
+        var url = (window.location.hostname.includes('localhost')) ? 'http://localhost:8080/api/auth/google' : '';
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            // console.log('Name: ' + profile.getName());
+            // console.log('Image URL: ' + profile.getImageUrl());
+            // console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+            var idToken = googleUser.getAuthResponse().id_token;
+
+            // console.log(idToken);
+
+            const data = {idToken}
+
+            fetch(url, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            })
+            .then(resp => resp.json())
+            .then(data => {
+                document.getElementById("nameGoogle").innerHTML = data.result.name;
+                document.getElementById("emailGoogle").innerHTML = data.result.email;
+                document.getElementById("googleImg").src = data.result.img;
+            })
+            .catch(console.log);
+        }
+
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+                document.getElementById("nameGoogle").innerHTML = "";
+                document.getElementById("emailGoogle").innerHTML = "";
+                document.getElementById("googleImg").src = "";
+            });
+        }
+    </script>
 </body>
 </html>
