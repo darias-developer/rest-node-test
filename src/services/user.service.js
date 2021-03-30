@@ -1,13 +1,11 @@
-const bcryptjs = require('bcryptjs');
-
 const User = require('../models/user.model');
 
-const getUsers_ = async (limit, offset) => {
+const getUsers = async (limit, offset) => {
   // filtra la query por campos
   const query = {status: true};
   // consulta 2 querys y devuelve el resultado cuendo las 2 querys terminen
   return [total, usuarios] = await Promise.all([
-    User.countDocuments( query ),
+    User.countDocuments(query),
     User.find( query )
         .select({'_id': 1, 'name': 2, 'email': 3, 'role': 4})
         .limit( Number( limit ) )
@@ -16,61 +14,32 @@ const getUsers_ = async (limit, offset) => {
 };
 
 const getUserByEmail = async (email) => {
+  // busca un usuario por email
   return await User.findOne({email});
 };
 
-const createUser = async (userData) => {
-  try {
-    // encriptar contrase;a
-    const salt = await bcryptjs.genSaltSync();
-    userData.password = await bcryptjs.hashSync(userData.password, salt);
-
-    const user = new User({
-      name: userData.name,
-      email: userData.email,
-      role: userData.role,
-      password: userData.password,
-    });
-
-    // guardar en db
-    await user.save();
-  } catch (error) {
-    console.error(error);
-    throw new Error('Ha ocurrido un error al crear el usuario');
-  }
+const getUserByUid = async (uid) => {
+  // busca un usuario por uid
+  return await User.findById(uid);
 };
 
-const updateUser = async (userData) => {
-  try {
-    const user = new User();
-    user.name = userData.name;
-    user.email = userData.email;
+const updateUser = async (id, userData) => {
+  // actualiza un usuario por su id
+  await User.findByIdAndUpdate(id, userData);
+};
 
-    if (userData.password) {
-      // encriptar contrase;a
-      const salt = await bcryptjs.genSaltSync();
-      user.password = await bcryptjs.hashSync(userData.password, salt);
-    }
+const createUser = async (userData) => {
+  // crea un nuevo usuario
+  const user = new User(userData);
 
-    if (userData.role) {
-      user.role = userData.role;
-    }
-
-    if (userData.status) {
-      user.status = userData.status;
-    }
-
-    // guardar en db
-    await user.save();
-  } catch (error) {
-    console.error(error);
-    throw new Error('Ha ocurrido un error al crear el usuario');
-  }
+  // guardar en db
+  await user.save();
 };
 
 module.exports = {
-  getUsers_,
+  getUsers,
   getUserByEmail,
+  getUserByUid,
   createUser,
   updateUser,
 };

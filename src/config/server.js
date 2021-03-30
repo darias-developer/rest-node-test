@@ -6,6 +6,8 @@ const {dbConnection} = require('../database/config');
 const {createUser,
   getUserByEmail} = require('../services/user.service');
 
+const logger = require('../helpers/logger.helper')(module);
+
 class Server {
   constructor() {
     this.app = express();
@@ -61,7 +63,7 @@ class Server {
 
   listten() {
     this.app.listen( this.port, () => {
-      console.log('Servidor corriendo en puerto: ', this.port);
+      logger.info('Servidor corriendo en puerto: ' + this.port);
     });
   }
 }

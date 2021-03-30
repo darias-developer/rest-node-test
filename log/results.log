@@ -1,0 +1,117 @@
+2021-03-29 21:59:46 info: Servidor corriendo en puerto: 8080
+2021-03-29 22:01:07 [info]: Servidor corriendo en puerto: 8080
+2021-03-29 22:02:18 [INFO]: Servidor corriendo en puerto: 8080
+2021-03-29 22:02:28 [INFO]: Servidor corriendo en puerto: 8080
+2021-03-29 22:03:51 [info.toUpperCase()]: Servidor corriendo en puerto: 8080
+2021-03-29 22:04:18 [info]: Servidor corriendo en puerto: 8080
+2021-03-29 22:05:45 [info]: Servidor corriendo en puerto: 8080
+2021-03-29 22:06:16 [info]: Servidor corriendo en puerto: 8080
+2021-03-29 22:07:06 [info]: Servidor corriendo en puerto: 8080
+2021-03-29 22:07:06 [warn]: Servidor corriendo en puerto: 8080
+2021-03-29 22:07:06 [error]: Servidor corriendo en puerto: 8080
+2021-03-29 22:07:30 [INFO]: Servidor corriendo en puerto: 8080
+2021-03-29 22:07:30 [WARN]: Servidor corriendo en puerto: 8080
+2021-03-29 22:07:30 [ERROR]: Servidor corriendo en puerto: 8080
+2021-03-29 22:09:18 [INFO]: Servidor corriendo en puerto: 8080
+2021-03-29 22:09:18 [WARN]: Servidor corriendo en puerto: 8080
+2021-03-29 22:09:18 [ERROR]: Servidor corriendo en puerto: 8080
+2021-03-29 22:10:17 [INFO]: Servidor corriendo en puerto: 8080
+2021-03-29 22:10:17 [WARN]: Servidor corriendo en puerto: 8080
+2021-03-29 22:10:17 [ERROR]: Servidor corriendo en puerto: 8080
+2021-03-29 22:10:42 [INFO]: Servidor corriendo en puerto: 8080
+2021-03-29 22:10:42 [WARN]: Servidor corriendo en puerto: 8080
+2021-03-29 22:10:42 [ERROR]: Servidor corriendo en puerto: 8080
+2021-03-29 22:25:22 [INFO]: Servidor corriendo en puerto: 8080
+2021-03-29 22:25:22 [WARN]: Servidor corriendo en puerto: 8080
+2021-03-29 22:25:22 [ERROR]: Servidor corriendo en puerto: 8080
+2021-03-29 22:25:25 [INFO]: Servidor corriendo en puerto: 8080
+2021-03-29 22:25:25 [WARN]: Servidor corriendo en puerto: 8080
+2021-03-29 22:25:25 [ERROR]: Servidor corriendo en puerto: 8080
+undefined - 2021-03-29 22:26:10 [INFO]: Servidor corriendo en puerto: 8080
+undefined - 2021-03-29 22:26:10 [WARN]: Servidor corriendo en puerto: 8080
+undefined - 2021-03-29 22:26:10 [ERROR]: Servidor corriendo en puerto: 8080
+undefined - 2021-03-29 22:26:15 [INFO]: Servidor corriendo en puerto: 8080
+undefined - 2021-03-29 22:26:15 [WARN]: Servidor corriendo en puerto: 8080
+undefined - 2021-03-29 22:26:15 [ERROR]: Servidor corriendo en puerto: 8080
+undefined - 2021-03-29 22:43:50 [INFO]: Servidor corriendo en puerto: 8080
+undefined - 2021-03-29 22:43:50 [WARN]: Servidor corriendo en puerto: 8080
+undefined - 2021-03-29 22:43:50 [ERROR]: Servidor corriendo en puerto: 8080
+/Users/darias/david_ws/07-restserver/src/config/server.js - 2021-03-29 22:45:58 [INFO]: Servidor corriendo en puerto: 8080
+/Users/darias/david_ws/07-restserver/src/config/server.js - 2021-03-29 22:45:58 [WARN]: Servidor corriendo en puerto: 8080
+/Users/darias/david_ws/07-restserver/src/config/server.js - 2021-03-29 22:45:58 [ERROR]: Servidor corriendo en puerto: 8080
+/Users/darias/david_ws/07-restserver/src/config/server.js - 2021-03-29 22:54:41 [INFO]: Servidor corriendo en puerto: 8080
+/Users/darias/david_ws/07-restserver/src/config/server.js - 2021-03-29 22:54:41 [WARN]: Servidor corriendo en puerto: 8080
+/Users/darias/david_ws/07-restserver/src/config/server.js - 2021-03-29 22:54:41 [ERROR]: Servidor corriendo en puerto: 8080
+config/server.js - 2021-03-29 22:55:14 [INFO]: Servidor corriendo en puerto: 8080
+config/server.js - 2021-03-29 22:55:14 [WARN]: Servidor corriendo en puerto: 8080
+config/server.js - 2021-03-29 22:55:14 [ERROR]: Servidor corriendo en puerto: 8080
+src/config/server.js - 2021-03-29 22:55:21 [INFO]: Servidor corriendo en puerto: 8080
+src/config/server.js - 2021-03-29 22:55:21 [WARN]: Servidor corriendo en puerto: 8080
+src/config/server.js - 2021-03-29 22:55:21 [ERROR]: Servidor corriendo en puerto: 8080
+2021-03-29 22:56:06 [src/config/server.js][INFO]: Servidor corriendo en puerto: 8080
+2021-03-29 22:56:06 [src/config/server.js][WARN]: Servidor corriendo en puerto: 8080
+2021-03-29 22:56:06 [src/config/server.js][ERROR]: Servidor corriendo en puerto: 8080
+2021-03-29 22:56:16 [src/config/server.js][INFO]: Servidor corriendo en puerto: 8080
+2021-03-29 22:56:16 [src/config/server.js][WARN]: Servidor corriendo en puerto: 8080
+2021-03-29 22:56:16 [src/config/server.js][ERROR]: Servidor corriendo en puerto: 8080
+2021-03-29 22:56:52 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 22:56:52 [WARN][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 22:56:52 [ERROR][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:10:24 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:10:24 [WARN][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:10:24 [ERROR][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:11:09 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:11:09 [WARN][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:11:09 [ERROR][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:16:25 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:16:59 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:18:17 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:18:19 [INFO][src/database/config.js]: Base de datos en linea
+2021-03-29 23:18:41 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:18:43 [INFO][src/database/config.js]: Base de datos en linea
+2021-03-29 23:22:05 
+              [INFO]
+              [src/config/server.js]: 
+              Servidor corriendo en puerto: 8080
+2021-03-29 23:22:06 
+              [INFO]
+              [src/database/config.js]: 
+              Base de datos en linea
+2021-03-29 23:23:01 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:23:02 [INFO][src/database/config.js]: Base de datos en linea
+2021-03-29 23:23:20 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:23:22 [INFO][src/database/config.js]: Base de datos en linea
+2021-03-29 23:23:33 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:23:35 [INFO][src/database/config.js]: Base de datos en linea
+2021-03-29 23:24:18 [INFO][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:24:20 [INFO][src/database/config.js]: Base de datos en linea
+2021-03-29 23:24:31 [info][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:24:33 [info][src/database/config.js]: Base de datos en linea
+2021-03-29 23:26:29 [info][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:26:30 [info][src/database/config.js]: Base de datos en linea
+2021-03-29 23:26:36 [info][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:26:37 [info][src/database/config.js]: Base de datos en linea
+2021-03-29 23:30:22 [info][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:30:24 [info][src/database/config.js]: Base de datos en linea
+2021-03-29 23:31:29 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:31:31 [[32minfo[39m][src/database/config.js]: Base de datos en linea
+2021-03-29 23:31:48 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:31:50 [[32minfo[39m][src/database/config.js]: Base de datos en linea
+2021-03-29 23:32:00 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:32:02 [[32minfo[39m][src/database/config.js]: Base de datos en linea
+2021-03-29 23:32:22 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:32:23 [[32minfo[39m][src/database/config.js]: Base de datos en linea
+2021-03-29 23:32:27 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:32:28 [[32minfo[39m][src/database/config.js]: Base de datos en linea
+2021-03-29 23:32:58 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:33:00 [[32minfo[39m][src/database/config.js]: Base de datos en linea
+2021-03-29 23:40:56 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:40:57 [[32minfo[39m][src/database/config.js]: Base de datos en linea
+2021-03-29 23:41:18 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:41:19 [[32minfo[39m][src/database/config.js]: Base de datos en linea
+2021-03-29 23:41:31 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:41:33 [[32minfo[39m][src/database/config.js]: Base de datos en linea
+2021-03-29 23:41:37 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:41:39 [[32minfo[39m][src/database/config.js]: Base de datos en linea
+2021-03-29 23:43:51 [[32minfo[39m][src/config/server.js]: Servidor corriendo en puerto: 8080
+2021-03-29 23:43:53 [[32minfo[39m][src/database/config.js]: Base de datos en linea

@@ -1,19 +1,21 @@
 const {request, response} = require('express');
 
 const isAdminRole = (req = request, res = response, next) => {
-  if ( !req.userAuth ) {
-    return res.status(500).json({
-      responseCode: 'ERROR',
-      description: 'No existe sesion activa',
-    });
-  }
+  try {
+    if (!req.userAuth) {
+      throw new Error('No existe sesion activa');
+    }
 
-  const {role, name} = req.userAuth;
+    const {role, name} = req.userAuth;
 
-  if ( role !== 'ADMIN_ROLE' ) {
+    if (role !== 'ADMIN_ROLE') {
+      throw new Error(`El usuario ${name} no tiene acceso a esta funcionalidad`);
+    }
+  } catch (error) {
+    console.log(error);
     return res.status(401).json({
       responseCode: 'ERROR',
-      description: `El usuario ${name} no tiene acceso a esta funcionalidad`,
+      description: error.message,
     });
   }
 
@@ -22,19 +24,21 @@ const isAdminRole = (req = request, res = response, next) => {
 
 const hasRole = (...roles) => {
   return (req = request, res = response, next) => {
-    if ( !req.userAuth ) {
-      return res.status(500).json({
-        responseCode: 'ERROR',
-        description: 'No existe sesion activa',
-      });
-    }
+    try {
+      if (!req.userAuth) {
+        throw new Error('No existe sesion activa');
+      }
 
-    const {role, name} = req.userAuth;
+      const {role, name} = req.userAuth;
 
-    if ( !roles.includes( role ) ) {
+      if (!roles.includes(role)) {
+        throw new Error(`El usuario ${name} no tiene acceso a esta funcionalidad`);
+      }
+    } catch (error) {
+      console.log(error);
       return res.status(401).json({
         responseCode: 'ERROR',
-        description: `El usuario ${name} no tiene acceso a esta funcionalidad`,
+        description: error.message,
       });
     }
 

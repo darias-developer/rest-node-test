@@ -1,52 +1,57 @@
-const jwt = require('jsonwebtoken');
 const {request, response} = require('express');
 
-const User = require('../models/user.model');
+const {getUserByUid} = require('../services/user.service');
 
-const validateJWT = async ( req = request, res = response, next ) => {
+const {validateJWT} = require('../helpers/generate.jwt.helper');
+
+const ValidationError = require('../util/ValidationError');
+
+/**
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ * @throws 401 Unauthorized
+ */
+const validateToken = async ( req = request, res = response, next ) => {
+  // obtiene parametros desde el headers
   const token = req.header('x-token');
 
-  if ( !token ) {
-    return res.status(401).json({
-      responseCode: 'ERROR',
-      description: 'No se ha encontrado token de sesion',
-    });
-  }
-
   try {
-    const {uid} = jwt.verify( token, process.env.SECRET_OR_PRIVATE_KEY);
+    if (!token) {
+      throw new ValidationError('No se ha encontrado token de sesion');
+    }
+
+    const {uid} = validateJWT(token);
 
     // obtiene usuario
-    const userAuth = await User.findById( uid );
+    const userAuth = await getUserByUid(uid);
 
     // valida si el usuario es valido
-    if ( !userAuth ) {
-      return res.status(401).json({
-        responseCode: 'ERROR',
-        description: 'Usuario no existe',
-      });
+    if (!userAuth) {
+      throw new ValidationError('Usuario no existe');
     }
 
     // valida si el usuario es valido
-    if ( !userAuth.status ) {
-      return res.status(401).json({
-        responseCode: 'ERROR',
-        description: 'Usuario no valido',
-      });
+    if (!userAuth.status) {
+      throw new ValidationError('Usuario no valido');
     }
 
     req.userAuth = userAuth;
 
     next();
-  } catch ( err ) {
-    console.log(err);
-    return res.status(401).json({
-      responseCode: 'ERROR',
-      description: 'Token no valido',
-    });
+  } catch (error) {
+    console.log(error);
+    const errData = {responseCode: 'ERROR', description: null};
+    if (error instanceof ValidationError) {
+      errData.description = error.message;
+    } else {
+      errData.description = 'Ha ocurrido un error en la validacion de token';
+    }
+
+    res.status(401).json(errData);
   }
 };
 
 module.exports = {
-  validateJWT,
+  validateToken,
 };

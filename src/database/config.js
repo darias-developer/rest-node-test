@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const logger = require('../helpers/logger.helper')(module);
+
 const dbConnection = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_CNN, {
@@ -9,9 +11,9 @@ const dbConnection = async () => {
       useFindAndModify: true,
     });
 
-    console.log('Base de datos en linea');
+    logger.info('Base de datos en linea');
   } catch (err) {
-    console.log(err);
+    logger.error(err);
     throw new Error('Error en la conexion a la db');
   }
 };
